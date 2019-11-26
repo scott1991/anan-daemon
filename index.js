@@ -57,10 +57,10 @@ const ChatClient = require('twitch-chat-client').default;
 			}
 			else if ( AnMap[channel.substring(1)][user] == 1 ){
 				chatClient.say(channel, `@${msg.userInfo.displayName} 打過招呼了! camperAngry  `);
-				AnMap[user] ++ ;
+				AnMap[channel.substring(1)][user] ++ ;
 			}else if ( !(AnMap[channel.substring(1)][user]) ){
 				chatClient.say(channel, `@${msg.userInfo.displayName} 安安~ camperAYAYA `);
-				AnMap[user] = 1 ;
+				AnMap[channel.substring(1)][user] = 1 ;
 			}else{
 				// noop
 			}
