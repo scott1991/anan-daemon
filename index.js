@@ -13,7 +13,7 @@ const ChatClient = require('twitch-chat-client').default;
 	await chatClient.waitForRegistration();
 
 	let userNames = ['gueigotv','9qoq'];
-	userNames.forEach((userName) =>{
+	userNames.forEach(async (userName) =>{
 		await chatClient.join(userName);
 	});
 
